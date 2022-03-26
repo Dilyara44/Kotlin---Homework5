@@ -17,7 +17,7 @@ class WallService {
         for ((index, post) in posts.withIndex()) {
             if (initialPost.id == post.id) {
                 posts[index] = post.copy(
-                    id = id,
+                    id = post.id,
                     ownerId = initialPost.ownerId,
                     createdBy = initialPost.createdBy,
                     text = initialPost.text,
@@ -39,7 +39,6 @@ class WallService {
                     isFavourite = initialPost.isFavourite,
                     postponedId = initialPost.postponedId
                 )
-                id++
                 return true
             }
         }
