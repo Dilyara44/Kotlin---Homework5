@@ -2,7 +2,7 @@ package ru.netology
 
 class WallService {
 
-    private var posts = emptyArray<Post>()
+    var posts = emptyArray<Post>()
 
     private var id = 1.toLong()
 
@@ -44,5 +44,4 @@ class WallService {
         }
         return false
     }
-
 }
