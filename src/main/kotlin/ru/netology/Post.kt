@@ -1,7 +1,7 @@
 package ru.netology
 
 data class Post(
-    val id: Long?,
+    val id: Long,
     val ownerId: Long,
     val fromId: Long,
     val createdBy: Long?,
@@ -16,6 +16,7 @@ data class Post(
     val reposts: Reposts?,
     val views: Views?,
     val postType: String,
+    val attachment: Array<Attachment>?,
     val postSource: PostSource?,
     val geo: Geo?,
     val signerId: Long,

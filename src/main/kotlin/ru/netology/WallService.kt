@@ -4,6 +4,7 @@ class WallService {
 
     var posts = emptyArray<Post>()
 
+
     private var id = 1.toLong()
 
     fun add(post: Post): Post {

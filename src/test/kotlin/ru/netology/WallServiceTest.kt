@@ -9,6 +9,7 @@ class WallServiceTest {
     @Test
     fun addIdChanged() {
         val service = WallService()
+        val attachments = emptyArray<Attachment>()
 
         val actual = Post(
             1,
@@ -26,6 +27,7 @@ class WallServiceTest {
             Reposts(1, true),
             null,
             "post",
+            attachments,
             PostSource("Что-то неизвестное"),
             Geo ("1", "1", "1"),
             1,
@@ -55,6 +57,7 @@ class WallServiceTest {
             Reposts(1, true),
             null,
             "post",
+            attachments,
             PostSource("Что-то неизвестное"),
             Geo ("1", "1", "1"),
             1,
@@ -76,6 +79,7 @@ class WallServiceTest {
     fun updateExistingTrue() {
 
         val service = WallService()
+        val attachments = emptyArray<Attachment>()
 
         service.add(
             Post(
@@ -94,6 +98,7 @@ class WallServiceTest {
                 null,
                 Views(1),
                 "post",
+                attachments,
                 PostSource("Что-то неизвестное"),
                 Geo ("1", "1", "1"),
                 1,
@@ -124,6 +129,7 @@ class WallServiceTest {
                 null,
                 Views(2),
                 "post",
+                attachments,
                 PostSource("Что-то неизвестное"),
                 Geo ("1", "1", "1"),
                 2,
@@ -154,6 +160,7 @@ class WallServiceTest {
                 Reposts(3, true),
                 Views(3),
                 "post",
+                attachments,
                 PostSource("Что-то неизвестное"),
                 Geo ("1", "1", "1"),
                 3,
@@ -184,6 +191,7 @@ class WallServiceTest {
             Reposts(5, false),
             Views(5),
             "suggest",
+            attachments,
             PostSource("Что-то неизвестное"),
             Geo ("1", "1", "1"),
             5,
@@ -209,6 +217,9 @@ class WallServiceTest {
 
         val service = WallService()
 
+        val attachments = emptyArray<Attachment>()
+
+
         service.add(
             Post(
                 0,
@@ -226,6 +237,7 @@ class WallServiceTest {
                 Reposts(1, true),
                 Views(1),
                 "post",
+                attachments,
                 PostSource("Что-то неизвестное"),
                 Geo ("1", "1", "1"),
                 1,
@@ -256,6 +268,7 @@ class WallServiceTest {
                 Reposts(2, true),
                 Views(2),
                 "post",
+                attachments,
                 PostSource("Что-то неизвестное"),
                 Geo ("1", "1", "1"),
                 2,
@@ -286,6 +299,7 @@ class WallServiceTest {
                 Reposts(3, true),
                 Views(3),
                 "post",
+                attachments,
                 PostSource("Что-то неизвестное"),
                 Geo ("1", "1", "1"),
                 3,
@@ -316,6 +330,7 @@ class WallServiceTest {
             Reposts(5, false),
             Views(5),
             "suggest",
+            attachments,
             null,
             Geo ("1", "1", "1"),
             5,
