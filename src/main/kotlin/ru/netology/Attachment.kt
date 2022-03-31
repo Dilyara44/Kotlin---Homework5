@@ -1,8 +1,13 @@
 package ru.netology
 
-abstract class Attachment(
-    val type: String,
+sealed class Attachment(val type: String)
 
-    var attachments: Array<Attachment> = emptyArray<Attachment>()
+data class VideoAttachment(val video: Video) : Attachment("Video")
 
-)
+data class AudioAttachment(val audio: Audio) : Attachment("Audio")
+
+data class DocAttachment(val doc: Doc) : Attachment("Doc")
+
+data class LinkAttachment(val link: Link) : Attachment("Link")
+
+data class PhotoAttachment(val photo: Photo) : Attachment("Photo")
