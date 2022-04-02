@@ -2,49 +2,48 @@
 
 <span class="fc" id="L3">class WallService {</span>
 
-<span class="fc" id="L5">    private var posts = emptyArray&lt;Post&gt;()</span>
+<span class="pc" id="L5">    var posts = emptyArray&lt;Post&gt;()</span>
 
-<span class="fc" id="L7">    private var id = 1.toLong()</span>
+
+<span class="fc" id="L8">    private var id = 1.toLong()</span>
 
     fun add(post: Post): Post {
-<span class="fc" id="L10">        val target = post.copy(id = id)</span>
-<span class="fc" id="L11">        id++</span>
-<span class="fc" id="L12">        posts += target</span>
-<span class="fc" id="L13">        return posts.last()</span>
+<span class="fc" id="L11">        val target = post.copy(id = id)</span>
+<span class="fc" id="L12">        id++</span>
+<span class="fc" id="L13">        posts += target</span>
+<span class="fc" id="L14">        return posts.last()</span>
     }
 
     fun update(initialPost: Post): Boolean {
-<span class="fc bfc" id="L17" title="All 2 branches covered.">        for ((index, post) in posts.withIndex()) {</span>
-<span class="fc bfc" id="L18" title="All 2 branches covered.">            if (initialPost.id == post.id) {</span>
-<span class="fc" id="L19">                posts[index] = post.copy(</span>
-<span class="fc" id="L20">                    id = id,</span>
-<span class="fc" id="L21">                    ownerId = initialPost.ownerId,</span>
-<span class="fc" id="L22">                    createdBy = initialPost.createdBy,</span>
-<span class="fc" id="L23">                    text = initialPost.text,</span>
-<span class="fc" id="L24">                    replyOwnerId = initialPost.replyOwnerId,</span>
-<span class="fc" id="L25">                    replyPostId = initialPost.replyPostId,</span>
-<span class="fc" id="L26">                    friendsOnly = initialPost.friendsOnly,</span>
-<span class="fc" id="L27">                    comments = initialPost.comments,</span>
-<span class="fc" id="L28">                    copyright = initialPost.copyright,</span>
-<span class="fc" id="L29">                    likes = initialPost.likes,</span>
-<span class="fc" id="L30">                    reposts = initialPost.reposts,</span>
-<span class="fc" id="L31">                    views = initialPost.views,</span>
-<span class="fc" id="L32">                    postType = initialPost.postType,</span>
-<span class="fc" id="L33">                    signerId = initialPost.signerId,</span>
-<span class="fc" id="L34">                    canPin = initialPost.canPin,</span>
-<span class="fc" id="L35">                    canDelete = initialPost.canDelete,</span>
-<span class="fc" id="L36">                    canEdit = initialPost.canEdit,</span>
-<span class="fc" id="L37">                    isPinned = initialPost.isPinned,</span>
-<span class="fc" id="L38">                    markedAsAds = initialPost.markedAsAds,</span>
-<span class="fc" id="L39">                    isFavourite = initialPost.isFavourite,</span>
-<span class="fc" id="L40">                    postponedId = initialPost.postponedId</span>
+<span class="fc bfc" id="L18" title="All 2 branches covered.">        for ((index, post) in posts.withIndex()) {</span>
+<span class="fc bfc" id="L19" title="All 2 branches covered.">            if (initialPost.id == post.id) {</span>
+<span class="fc" id="L20">                posts[index] = post.copy(</span>
+<span class="fc" id="L21">                    id = post.id,</span>
+<span class="fc" id="L22">                    ownerId = initialPost.ownerId,</span>
+<span class="fc" id="L23">                    createdBy = initialPost.createdBy,</span>
+<span class="fc" id="L24">                    text = initialPost.text,</span>
+<span class="fc" id="L25">                    replyOwnerId = initialPost.replyOwnerId,</span>
+<span class="fc" id="L26">                    replyPostId = initialPost.replyPostId,</span>
+<span class="fc" id="L27">                    friendsOnly = initialPost.friendsOnly,</span>
+<span class="fc" id="L28">                    comments = initialPost.comments,</span>
+<span class="fc" id="L29">                    copyright = initialPost.copyright,</span>
+<span class="fc" id="L30">                    likes = initialPost.likes,</span>
+<span class="fc" id="L31">                    reposts = initialPost.reposts,</span>
+<span class="fc" id="L32">                    views = initialPost.views,</span>
+<span class="fc" id="L33">                    postType = initialPost.postType,</span>
+<span class="fc" id="L34">                    signerId = initialPost.signerId,</span>
+<span class="fc" id="L35">                    canPin = initialPost.canPin,</span>
+<span class="fc" id="L36">                    canDelete = initialPost.canDelete,</span>
+<span class="fc" id="L37">                    canEdit = initialPost.canEdit,</span>
+<span class="fc" id="L38">                    isPinned = initialPost.isPinned,</span>
+<span class="fc" id="L39">                    markedAsAds = initialPost.markedAsAds,</span>
+<span class="fc" id="L40">                    isFavourite = initialPost.isFavourite,</span>
+<span class="fc" id="L41">                    postponedId = initialPost.postponedId</span>
                 )
-<span class="fc" id="L42">                id++</span>
 <span class="fc" id="L43">                return true</span>
             }
         }
 <span class="fc" id="L46">        return false</span>
     }
-
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>
