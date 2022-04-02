@@ -2,7 +2,8 @@ package ru.netology
 
 class WallService {
 
-    var posts = emptyArray<Post>()
+    private var posts = emptyArray<Post>()
+    private var attachments = emptyArray<Attachment>()
 
 
     private var id = 1.toLong()
