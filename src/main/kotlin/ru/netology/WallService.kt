@@ -3,12 +3,15 @@ package ru.netology
 class WallService {
 
     private var posts = emptyArray<Post>()
+    private var comments = emptyArray<Comments>()
+    private var attachments = emptyArray<Attachment>()
 
-    private var id = 1.toLong()
+
+    private var newId = 1.toLong()
 
     fun add(post: Post): Post {
-        val target = post.copy(id = id)
-        id++
+        val target = post.copy(id = newId)
+        newId++
         posts += target
         return posts.last()
     }
@@ -45,4 +48,16 @@ class WallService {
         return false
     }
 
+    fun createComment(comment: Comments): Comments {
+        for (post in posts) {
+            if (post.id == comment.postId) {
+                comments += comment
+                return comments.last()
+            }
+        }
+        throw PostNotFoundException("Такого поста не существует!")
+
+    }
 }
+
+
