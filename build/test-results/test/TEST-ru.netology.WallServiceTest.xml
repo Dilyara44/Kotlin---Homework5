@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="ru.netology.WallServiceTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2022-03-31T17:56:05" hostname="LAPTOP-BP39JUB9" time="0.145">
+<testsuite name="ru.netology.WallServiceTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2022-04-03T10:53:13" hostname="LAPTOP-BP39JUB9" time="0.16">
   <properties/>
-  <testcase name="updateExistingFalse" classname="ru.netology.WallServiceTest" time="0.145"/>
-  <testcase name="addIdChanged" classname="ru.netology.WallServiceTest" time="0.0"/>
+  <testcase name="updateExistingFalse" classname="ru.netology.WallServiceTest" time="0.158"/>
+  <testcase name="commentShouldBeAdded" classname="ru.netology.WallServiceTest" time="0.001"/>
+  <testcase name="shouldThrow" classname="ru.netology.WallServiceTest" time="0.0"/>
+  <testcase name="addIdChanged" classname="ru.netology.WallServiceTest" time="0.001"/>
   <testcase name="updateExistingTrue" classname="ru.netology.WallServiceTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>

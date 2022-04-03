@@ -1,9 +1,15 @@
 package ru.netology
 
 data class Comments(
-    val count: Int,
-    val canPost: Boolean,
-    val groupsCanPost: Boolean,
-    val canClose: Boolean,
-    val canOpen: Boolean
+    val id: Long,
+    val fromId: Long,
+    val postId: Long,
+    val date: Int,
+    val text: String,
+    val donut: Donut,
+    val replyToUser: Long?,
+    val replyToComment: Long?,
+    val attachments: Array <Attachment>,
+    val parentsStack: String,
+    val thread: Thread
 )
